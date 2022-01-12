@@ -1,6 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  colors: {
+    spaceBlue: {
+      100: 'D0D6F9',
+      900: '0B0D17',
+    }
+  },
   fonts: {
     heading: 'Bellefair',
     body: 'Barlow Condensed',
