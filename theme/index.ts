@@ -3,8 +3,8 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     spaceBlue: {
-      100: 'D0D6F9',
-      900: '0B0D17',
+      100: '#D0D6F9',
+      900: '#0B0D17',
     }
   },
   fonts: {
@@ -56,6 +56,9 @@ const theme = extendTheme({
       fontWeight: 'normal',
       fontSize: '16px',
       letterSpacing: '2.7px',
+      color: "white",
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   }
 })
