@@ -4,11 +4,12 @@ import React, { useState } from "react";
 interface IProps {
   index: number;
   label: string;
+  isActive: boolean;
+  onClick: (id:number) => void;
 }
 
 const NavigationBarButton = (props: IProps) => {
-  const { index, label } = props;
-  const [show, setShow] = useState<Boolean>(false);
+  const { index, label, isActive, onClick } = props;
 
   const twoDigitsNumber = (value: number): string => {
     if (value > 9) {
@@ -23,8 +24,10 @@ const NavigationBarButton = (props: IProps) => {
       h="100%"
       textStyle="nav"
       direction="column"
-      onMouseOver={() => setShow(true)}
-      onMouseOut={() => setShow(false)}
+      borderBottom='2px'
+      borderColor={isActive ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0)'}
+      _hover={ !isActive ? {borderColor: 'rgba(255,255,255,0.5)'} : {}}
+      onClick={() => onClick(index)}
     >
       <Flex direction="row" flex="1" align="center">
         <HStack>
@@ -32,7 +35,6 @@ const NavigationBarButton = (props: IProps) => {
           <Text>{label}</Text>
         </HStack>
       </Flex>
-      <Flex className="bar" w="100%" bgColor={show && 'white'} h="3px" />
     </Flex>
   );
 };

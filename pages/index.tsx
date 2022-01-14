@@ -1,18 +1,26 @@
-import { Button, Flex, Heading, Input, useColorMode, useColorModeValue, Image } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import { useState } from "react";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
-import NavigationBarButton from "../components/NavigationBarButton/NavigationBarButton";
+import MainContainer from "../components/MainContainer/MainContainer";
 
 const Home: NextPage = () => {
-  
+  const [currentTab, setCurrentTab] = useState<number>();
+  const options = [
+    { label: "HOME" },
+    { label: "DESTINATION" },
+    { label: "CREW" },
+    { label: "TECHNOLOGY" },
+  ];
+
   return (
-    <Flex width="100vh" h='600px' alignItems="center" justifyContent="center" bgColor='spaceBlue.900'>
-      <NavigationBar>
-        <NavigationBarButton index={0} label={'ACTIVE'}/>
-        <NavigationBarButton index={1} label={'HOVERED'}/>
-        <NavigationBarButton index={2} label={'IDLE'}/>
-      </NavigationBar>
-    </Flex>
+    <MainContainer>
+      <NavigationBar
+        options={options}
+        currentTab={currentTab}
+        onChange={setCurrentTab}
+      />
+    </MainContainer>
   );
 };
 
