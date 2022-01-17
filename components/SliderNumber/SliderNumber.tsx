@@ -1,6 +1,6 @@
-import { HStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import React from "react";
-import SliderButton from "./SliderButton/SliderButton";
+import SliderNumberButton from "./SliderNumberButton/SliderNumberButton";
 
 interface IProps {
   amount: number;
@@ -14,7 +14,7 @@ const Slider = (props: IProps) => {
   const renderSliderButtons = () => {
     let buttons = [];
     for (let i=0; i < amount; i++){
-      buttons.push(<SliderButton
+      buttons.push(<SliderNumberButton
         key={i}
         isActive={i === current}
         onChange={onChange}
@@ -24,7 +24,7 @@ const Slider = (props: IProps) => {
     return buttons;
   };
 
-  return <HStack spacing={6}>{renderSliderButtons()}</HStack>;
+  return <VStack spacing={8}>{renderSliderButtons()}</VStack>;
 };
 
 export default Slider;
