@@ -8,9 +8,7 @@ function MainButton(props: IProps) {
   return (
     <Button
       textStyle='mainButton'
-      borderRadius='50%'
-      w='274px'
-      h='274px'
+      variant='mainButton'
       _hover={{boxShadow:'0 0 0 88px rgba(255, 255, 255, 0.1)'}}
       _focus={{}}
     >
