@@ -1,12 +1,12 @@
-import { Flex, HStack } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import React from "react";
-import NavigationBarButton from "../NavigationBarButton/NavigationBarButton";
+import NavigationBarTab from "../NavigationBarTab/NavigationBarTab";
 
-interface INavButton {
+interface INavTab {
   label: string;
 }
 interface IProps {
-  options: INavButton[];
+  options: INavTab[];
   currentTab?: number;
   onChange: (id: number) => void;
 }
@@ -15,11 +15,11 @@ export const NavigationBar = (props: IProps) => {
   const { options, currentTab, onChange } = props;
 
   const renderButtons = () => {
-    return options?.map((item: INavButton, index: number) => {
+    return options?.map((item: INavTab, index: number) => {
       const { label } = item;
 
       return (
-        <NavigationBarButton
+        <NavigationBarTab
           onClick={onChange}
           isActive={index === currentTab}
           key={index}

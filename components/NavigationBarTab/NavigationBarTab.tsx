@@ -1,5 +1,5 @@
-import { background, Box, Flex, HStack, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Flex, HStack, Text } from "@chakra-ui/react";
+import React from "react";
 
 interface IProps {
   index: number;

@@ -1,8 +1,8 @@
-import { Flex, Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useState } from "react";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import MainContainer from "../components/MainContainer/MainContainer";
+import MainButton from "../components/MainButton/MainButton";
 
 const Home: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<number>();
@@ -20,6 +20,7 @@ const Home: NextPage = () => {
         currentTab={currentTab}
         onChange={setCurrentTab}
       />
+      <MainButton>EXPLORE</MainButton>
     </MainContainer>
   );
 };
