@@ -4,7 +4,7 @@ import NavigationBar from "../components/NavigationBar/NavigationBar";
 import MainContainer from "../components/MainContainer/MainContainer";
 import MainButton from "../components/MainButton/MainButton";
 import Slider from "../components/Slider/Slider";
-import SliderButton from "../components/SliderButton/SliderButton";
+import SliderNumber from "../components/SliderNumber/SliderNumber";
 
 const Home: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<number>();
@@ -24,7 +24,12 @@ const Home: NextPage = () => {
         onChange={setCurrentTab}
       />
       <MainButton>EXPLORE</MainButton>
-      <Slider amount={4} current={currentSlider} onChange={setCurrentSlider}/>
+      {/* <Slider amount={4} current={currentSlider} onChange={setCurrentSlider} /> */}
+      <SliderNumber
+        amount={4}
+        current={currentSlider}
+        onChange={setCurrentSlider}
+      />
     </MainContainer>
   );
 };

@@ -46,6 +46,11 @@ const theme = extendTheme({
       justifyContent: "center",
       alignItems: "center",
     },
+    sliderNumber: {
+      fontFamily: "Bellefair",
+      fontWeight: "normal",
+      fontSize: "32px",
+    },
   },
 });
 
