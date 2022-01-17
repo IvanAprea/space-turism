@@ -5,7 +5,7 @@ interface IProps {
   children: JSX.Element | JSX.Element[];
 }
 
-function MainContainer(props: IProps) {
+const MainContainer = (props: IProps) => {
   return (
     <Flex
       direction='column'

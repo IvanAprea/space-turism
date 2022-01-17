@@ -4,7 +4,7 @@ import React from 'react'
 interface IProps {
   children: string;
 }
-function MainButton(props: IProps) {
+const MainButton = (props: IProps) => {
   return (
     <Button
       textStyle='mainButton'
