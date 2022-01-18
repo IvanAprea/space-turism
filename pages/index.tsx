@@ -3,8 +3,8 @@ import { useState } from "react";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import MainContainer from "../components/MainContainer/MainContainer";
 import MainButton from "../components/MainButton/MainButton";
-import Slider from "../components/Slider/Slider";
 import SliderNumber from "../components/SliderNumber/SliderNumber";
+import {CircleStar} from '../public/icons/CircleStar';
 
 const Home: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<number>();
@@ -30,6 +30,7 @@ const Home: NextPage = () => {
         current={currentSlider}
         onChange={setCurrentSlider}
       />
+        <CircleStar />
     </MainContainer>
   );
 };
