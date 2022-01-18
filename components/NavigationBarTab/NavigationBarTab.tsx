@@ -1,15 +1,20 @@
 import { Flex, HStack, Text } from "@chakra-ui/react";
 import React from "react";
-
+import { useRouter } from 'next/router';
+interface INavTab {
+  label: string;
+  path: string;
+}
 interface IProps {
   index: number;
-  label: string;
+  item: INavTab;
   isActive: boolean;
-  onClick: (id:number) => void;
+  setCurrentTab: (id:number) => void;
 }
 
 const NavigationBarButton = (props: IProps) => {
-  const { index, label, isActive, onClick } = props;
+  const { index, item, isActive, setCurrentTab } = props;
+  const router = useRouter();
 
   const twoDigitsNumber = (value: number): string => {
     if (value > 9) {
@@ -17,6 +22,11 @@ const NavigationBarButton = (props: IProps) => {
     }
     return `0${value}`;
   };
+
+  const handleClick = () => {
+    setCurrentTab(index);
+    router.push(item.path);
+  }
 
   return (
     <Flex
@@ -27,12 +37,12 @@ const NavigationBarButton = (props: IProps) => {
       borderBottom='2px'
       borderColor={isActive ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0)'}
       _hover={ !isActive ? {borderColor: 'rgba(255,255,255,0.5)'} : {}}
-      onClick={() => onClick(index)}
+      onClick={() => handleClick()}
     >
       <Flex direction="row" flex="1" align="center">
         <HStack>
           <Text fontWeight="bold">{twoDigitsNumber(index)}</Text>
-          <Text>{label}</Text>
+          <Text>{item.label}</Text>
         </HStack>
       </Flex>
     </Flex>

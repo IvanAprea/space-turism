@@ -4,27 +4,27 @@ import NavigationBarTab from "../NavigationBarTab/NavigationBarTab";
 
 interface INavTab {
   label: string;
+  path: string;
 }
 interface IProps {
   options: INavTab[];
   currentTab?: number;
-  onChange: (id: number) => void;
+  setCurrentTab: (id: number) => void;
 }
 
 export const NavigationBar = (props: IProps) => {
-  const { options, currentTab, onChange } = props;
+  const { options, currentTab, setCurrentTab } = props;
 
   const renderButtons = () => {
     return options?.map((item: INavTab, index: number) => {
-      const { label } = item;
 
       return (
         <NavigationBarTab
-          onClick={onChange}
+          setCurrentTab={setCurrentTab}
           isActive={index === currentTab}
-          key={index}
-          label={label}
+          item={item}
           index={index}
+          key={index}
         />
       );
     });
@@ -37,7 +37,7 @@ export const NavigationBar = (props: IProps) => {
       sx={{ backdropFilter: "blur(5px)" }}
       justify="center"
       spacing={12}
-      padding='0 120px'
+      padding="0 120px"
     >
       {renderButtons()}
     </HStack>

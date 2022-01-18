@@ -6,7 +6,7 @@ import MainButton from "../components/MainButton/MainButton";
 import SliderNumber from "../components/SliderNumber/SliderNumber";
 import {CircleStar} from '../public/icons/CircleStar';
 
-const Home: NextPage = () => {
+const Destination: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<number>();
   const [currentSlider, setCurrentSlider] = useState<number>();
   const options = [
@@ -25,14 +25,14 @@ const Home: NextPage = () => {
       />
       <MainButton>EXPLORE</MainButton>
       {/* <Slider amount={4} current={currentSlider} onChange={setCurrentSlider} /> */}
-      <SliderNumber
+      {/* <SliderNumber
         amount={4}
         current={currentSlider}
         onChange={setCurrentSlider}
-      />
+      /> */}
         <CircleStar />
     </MainContainer>
   );
 };
 
-export default Home;
+export default Destination;
