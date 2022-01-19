@@ -5,21 +5,16 @@ import MainContainer from "../components/MainContainer/MainContainer";
 import MainButton from "../components/MainButton/MainButton";
 import SliderNumber from "../components/SliderNumber/SliderNumber";
 import {CircleStar} from '../public/icons/CircleStar';
+import { ROUTES } from "../components/constants/RoutePath";
 
 const Destination: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<number>();
   const [currentSlider, setCurrentSlider] = useState<number>();
-  const options = [
-    { label: "HOME", path: '/' },
-    { label: "DESTINATION", path: '/destination' },
-    { label: "CREW", path: '/crew' },
-    { label: "TECHNOLOGY", path: '/technology' },
-  ];
 
   return (
     <MainContainer>
       <NavigationBar
-        options={options}
+        options={ROUTES}
         currentTab={currentTab}
         setCurrentTab={setCurrentTab}
       />
