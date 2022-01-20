@@ -9,18 +9,16 @@ interface INavTab {
 interface IProps {
   options: INavTab[];
   currentTab?: number;
-  setCurrentTab: (id: number) => void;
 }
 
 export const NavigationBar = (props: IProps) => {
-  const { options, currentTab, setCurrentTab } = props;
+  const { options, currentTab } = props;
 
   const renderButtons = () => {
     return options?.map((item: INavTab, index: number) => {
 
       return (
         <NavigationBarTab
-          setCurrentTab={setCurrentTab}
           isActive={index === currentTab}
           item={item}
           index={index}

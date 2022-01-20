@@ -9,11 +9,10 @@ interface IProps {
   index: number;
   item: INavTab;
   isActive: boolean;
-  setCurrentTab: (id:number) => void;
 }
 
 const NavigationBarButton = (props: IProps) => {
-  const { index, item, isActive, setCurrentTab } = props;
+  const { index, item, isActive } = props;
   const router = useRouter();
 
   const twoDigitsNumber = (value: number): string => {
@@ -24,7 +23,6 @@ const NavigationBarButton = (props: IProps) => {
   };
 
   const handleClick = () => {
-    setCurrentTab(index);
     router.push(item.path);
   }
 
