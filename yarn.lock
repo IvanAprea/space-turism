@@ -776,6 +776,21 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/barlow-condensed@^4.5.0":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/barlow-condensed/-/barlow-condensed-4.5.1.tgz#f683b0ce03b6cf96209e7f0c8229c3bcb3f4d02e"
+  integrity sha512-Q4R77dy6cYE4LLIaQLlGPX9RLZY9GJ7nko3NTD8TApvK7l10JpsoTF71v3VyW2i/VH75EvkP3aFzeHv0QXhw+g==
+
+"@fontsource/barlow@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/barlow/-/barlow-4.5.1.tgz#a8356d52f141739dbc47f9c60c20a9f24161550a"
+  integrity sha512-Fy5KgrT8Xgod8yiJORPHRli0oE1+ABqY38ZjvgmpuNQL/tj6L97nktD5lAznBYcsoB4dITQiuXxh4c8ZvXWwIg==
+
+"@fontsource/bellefair@^4.5.0":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/bellefair/-/bellefair-4.5.2.tgz#93f3097d259a9ae0156e8a5c523afebc15682540"
+  integrity sha512-Kc4XY03qiyHDXzHvA9EEvucLGePuABPoQvcZ8xe6qagFjmv8y3EOJZ+hNgOrtBLr06I50qhc3AivAB8bQPaLOg==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"

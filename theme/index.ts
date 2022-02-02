@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import buttonVariants from './buttonTheme';
+import buttonVariants from "./buttonTheme";
 import headingVariants from "./headingTheme";
 
 const theme = extendTheme({
@@ -11,7 +11,6 @@ const theme = extendTheme({
   },
   fonts: {
     heading: "Bellefair",
-    body: "Barlow Condensed",
   },
   components: {
     Heading: {
@@ -50,6 +49,11 @@ const theme = extendTheme({
       fontFamily: "Bellefair",
       fontWeight: "normal",
       fontSize: "32px",
+    },
+    description: {
+      fontFamily: "Barlow",
+      lineHeight: "32px",
+      color: "spaceBlue.100",
     },
   },
 });

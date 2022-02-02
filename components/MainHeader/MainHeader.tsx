@@ -13,7 +13,7 @@ function MainHeader(props: IProps) {
   return (
     <Flex align="center" w="100%" justify="space-between" pt={9} pl="55px">
       <CircleStar />
-      <Flex h="1px" backgroundColor="red" w="100%" ml="100px" zIndex="1" position='relative'/>
+      <Flex h="1px" backgroundColor="#494949" w="100%" ml="100px" zIndex="1" position='relative'/>
       <NavigationBar options={ROUTES} currentTab={currentTab} />
     </Flex>
   );

@@ -1,11 +1,12 @@
 const buttonVariants = {
   mainButton: {
     bgColor: "white",
+    color: "spaceBlue.900",
     fontSize: "32px",
     borderRadius: "50%",
     fontWeight: "normal",
-    w: "274px",
-    h: "274px",
+    minW: "274px",
+    minH: "274px",
   },
 };
 
