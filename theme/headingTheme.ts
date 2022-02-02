@@ -2,6 +2,8 @@ const headingVariants = {
   h1: {
     fontSize: "150px",
     fontWeight: "normal",
+    lineHeight: "172px",
+    color: "white",
   },
   h2: {
     fontSize: "100px",
@@ -20,6 +22,8 @@ const headingVariants = {
     fontSize: "28px",
     fontWeight: "normal",
     letterSpacing: "4.75px",
+    lineHeight: "34px",
+    color: "spaceBlue.100",
   },
 };
 
